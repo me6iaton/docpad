@@ -2639,6 +2639,8 @@ class DocPad extends EventEmitterGrouped
 				# File Action
 				fileAction: (fileFullPath,fileRelativePath,nextFile,fileStat) ->
 					# Prepare
+					if process.platform == 'win32'
+						fileFullPath = fileFullPath.slice(0, 1).toUpperCase() + fileFullPath.slice(1)
 					data =
 						fullPath: fileFullPath
 						relativePath: fileRelativePath
