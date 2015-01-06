@@ -144,8 +144,8 @@ class PluginLoader
 				'platform'
 
 			# Check node engine
-			else if engines.node? and not semver.satisfies(process.version, engines.node)
-				'engine-node'
+#			else if engines.node? and not semver.satisfies(process.version, engines.node)
+#				'engine-node'
 
 			# Check docpad engine
 			else if engines.docpad? and not semver.satisfies(docpad.getVersion(), engines.docpad)
